@@ -1,0 +1,3 @@
+add_lunch_combo p5wifi-user
+add_lunch_combo p5wifi-userdebug
+add_lunch_combo p5wifi-eng

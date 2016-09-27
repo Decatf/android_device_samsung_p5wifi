@@ -12,28 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product, device/samsung/p5-common/p5-common.mk)
-
+$(call inherit-product, device/samsung/p4-common/p4-common.mk)
+$(call inherit-product, device/samsung/p5wifi/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/p5wifi/p5wifi-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := p5wifi
+PRODUCT_BRAND := Samsung
 PRODUCT_DEVICE := p5wifi
-PRODUCT_MODEL := p5wifi
+PRODUCT_MODEL := GT-P7310
+PRODUCT_MANUFACTURER := Samsung
