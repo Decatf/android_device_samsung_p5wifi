@@ -27,9 +27,9 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 606076928
 BOARD_CACHEIMAGE_PARTITION_SIZE := 462317159
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/p4
-TARGET_KERNEL_CONFIG := cyanogenmod_samsung_p5wifi-jb_defconfig
+# TARGET_KERNEL_SOURCE := kernel/samsung/p4
+# TARGET_KERNEL_CONFIG := cyanogenmod_samsung_p5wifi-jb_defconfig
 # Keep this as a fallback
-# TARGET_PREBUILT_KERNEL := device/samsung/p5wifi/twrp_kernel
+TARGET_PREBUILT_KERNEL := device/samsung/p5wifi/twrp_kernel
 
 TARGET_OTA_ASSERT_DEVICE := p5wifi,p5,GT-P7300,GT-P7310
